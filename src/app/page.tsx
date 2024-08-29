@@ -6,7 +6,7 @@ export default function Home() {
   const { user, error, isLoading } = useUser();
 
   if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>{error.message}</p>;
+  if (error) return <p>Error{error.message}</p>;
   if (user)
     return (
       <div className="w-[100vw] h-[100vh] bg-white flex justify-center items-center flex-col gap-4">
